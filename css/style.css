@@ -1,0 +1,241 @@
+*, *:before, *:after {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+	outline: none;
+}
+a {
+   text-decoration: none;
+}
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+body {
+	height: 100%;
+	font-family: sans-serif;
+}
+.wrapper {
+	overflow: hidden;
+	-webkit-tap-highlight-color: transparent;
+}
+.container {         
+	max-width: 1200px;   
+	margin: 0 auto;
+	padding: 0 15px;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+.section1 {
+	height: 100vh;
+	background: url('../img/11.jpg') center / cover no-repeat;
+}
+.section2 {
+	height: 100vh;
+	background: orange;
+}
+.section3 {
+	height: 100vh;
+	background: rgb(224, 232, 235);
+}
+
+/* WIDGET */
+.widget {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+}
+.call-widget-circle {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: url('../img/whatsapp.svg') center / cover no-repeat;
+	cursor: pointer;
+	transition: 150ms ease-in;
+}
+.call-widget-circle:hover {
+	transform: scale(1.05);
+	filter: brightness(1.05);
+}
+.call-widget-circle.circle-active {
+	transform: scale(0.75);
+	background: url('../img/close-icon.svg') center / cover no-repeat;
+}
+.call-widget-circle.circle-active:hover {
+	transform: scale(0.8);
+}
+
+.call-widget-circle2 {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #1BD741;
+	opacity: 0.3;
+	animation: call-widget-circle2 4s ease infinite;
+}
+.call-widget-circle2.circle2-active {
+	animation: none;
+	display: none;
+}
+@keyframes call-widget-circle2 {
+	0% {
+		transform: scale(1);
+	}
+
+	30% {
+		transform: scale(1.3);
+	}
+
+	75% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.call-widget-circle3 {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #18a134;
+	opacity: 0.8;
+	animation: call-widget-circle3 4s ease infinite;
+}
+.call-widget-circle3.circle3-active {
+	animation: none;
+	display: none;
+}
+@keyframes call-widget-circle3 {
+	0% {
+		transform: scale(1);
+	}
+
+	40% {
+		transform: scale(1.7);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1.7);
+		opacity: 0;
+	}
+}  
+
+.widget-block {
+	display: none;
+	position: fixed;
+	bottom: 120px;
+	right: 55px;	
+
+	width: 300px;
+	height: 400px;
+	padding: 30px 20px;
+
+	background: white;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.widget-block-wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+   align-items: center;
+}
+.widget-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+.widget-icons-row {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+}
+.widget-social-link {
+	width: 40%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: rgb(85, 85, 85);
+	cursor: pointer;
+	/* position: relative; */
+}
+.widget-social-link:nth-child(1) {
+	margin-bottom: 30px;
+}
+.widget-social-link:nth-child(2) {
+	margin-bottom: 30px;
+}
+.viber-link-mobile {
+	position: absolute;
+	top: 95px;
+	left: -35px;
+	display: none;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	border: 1px solid black;
+	background: url('../img/smartphone-mobile.svg') center / cover no-repeat;
+	transition: 0.1s ease;
+}
+.viber-link-pc {
+	position: absolute;
+	top: 95px;
+	right: 81px;
+	display: none;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	border: 1px solid black;
+	background: url('../img/pc-computer.svg') center / cover no-repeat;
+	transition: 0.1s ease;
+}
+.viber-link-mobile:hover, .viber-link-pc:hover {
+	transform: scale(1.1);
+}
+.widget-social-img {
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-bottom: 5px;
+	transition: 100ms ease;
+}
+.widget-social-img:hover {
+	transform: scale(1.1);
+}
+
+@media (max-width:768px) {
+	.widget {
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+		transform: scale(1);
+	}
+}
+@media (max-width:576px) {
+	.widget {
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+		transform: scale(1);
+	}
+}
+/* / WIDGET */
+
